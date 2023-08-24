@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // start coding here
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        scanner.close();
+
+        int sum = 0;
+        int count = 0;
+
+        for (int num = a; num <= b; num++) {
+            if (num % 3 == 0) {
+                sum += num;
+                count++;
+            }
+        }
+
+        double average = (double) sum / count;
+        System.out.printf("%.1f", average);
+    }
+}
