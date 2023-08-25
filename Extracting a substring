@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // start coding here
+        String inputString = scanner.nextLine();
+        int startIndex = scanner.nextInt();
+        int endIndex = scanner.nextInt();
+
+        scanner.close();
+
+        if (startIndex < 0 || endIndex >= inputString.length() || startIndex > endIndex) {
+            System.out.println("Invalid indices!");
+        } else {
+            String substring = extractSubstring(inputString, startIndex, endIndex);
+            System.out.println(substring);
+        }
+    }
+
+    public static String extractSubstring(String s, int start, int end) {
+        return s.substring(start, end + 1);
+    }
+}
