@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] integerArray = 
+ int[]{1, 2, 3, 4, 5};
+        System.out.println(arraySum(integerArray));
+    }
+    private static int arraySum(int[] arrayToSum) {
+        int sum = 0;
+        
+ (int number : arrayToSum) {
+            sum += number;
+        }
+        
+ sum;
+    }
+}
