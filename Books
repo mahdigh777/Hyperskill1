@@ -1,0 +1,16 @@
+class Book {
+    String title;
+    int yearOfPublishing;
+    boolean isAvailable;
+
+    // Parameterized constructor
+    Book(String title, int yearOfPublishing, boolean isAvailable) {
+        this.title = title;
+        this.yearOfPublishing = yearOfPublishing;
+        this.isAvailable = isAvailable;
+    }
+
+    Book() {
+        
+    }
+}
