@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class ChefHiringForm {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Chef Hiring Form");
+
+        
+        System.out.print("Enter your first name: ");
+        String firstName = scanner.nextLine();
+
+        
+        System.out.print("Enter years of experience: ");
+        int yearsOfExperience = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline character
+
+        
+        System.out.print("Enter cuisine preference: ");
+        String cuisinePreference = scanner.nextLine();
+
+        
+        System.out.println("The form for " + firstName + 
+                           " is completed. We will contact you if we need a chef who cooks " + 
+                           cuisinePreference + " dishes and has " + yearsOfExperience + " years of experience.");
+    }
+}
