@@ -1,0 +1,35 @@
+class Person {
+    String name;
+    int age;
+    String gender;
+
+    public Person(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+}
+
+class Employee extends Person {
+    int employee_id;
+
+    public Employee(String name, int age, String gender, int employee_id) {
+        super(name, age, gender);
+        this.employee_id = employee_id;
+    }
+}
+
+class Doctor extends Employee {
+    String specialization;
+
+    public Doctor(String name, int age, String gender, int employee_id, String specialization) {
+        super(name, age, gender, employee_id);
+        this.specialization = specialization;
+    }
+}
+
+class Patient extends Person {
+    public Patient(String name, int age, String gender) {
+        super(name, age, gender);
+    }
+}
