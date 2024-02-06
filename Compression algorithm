@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Reading input from the user
+        
+        String inputString = scanner.nextLine();
+        
+        // Encoding the string
+        System.out.print("Enter a string: ");
+        String encodedSequence = encodeString(inputString);
+        
+        // Output the encoded sequence
+        System.out.println("Encoded sequence: " + encodedSequence);
+        
+        scanner.close();
+    }
+    
+    public static String encodeString(String s) {
+        StringBuilder encodedString = new StringBuilder();
+        
+        if (s.length() == 0) {
+            return encodedString.toString();
+        }
+        
+        char currentChar = s.charAt(0);
+        int charCount = 1;
+        
+        for (int i = 1; i < s.length(); i++) {
+            if (s.charAt(i) == currentChar) {
+                charCount++;
+            } else {
+                encodedString.append(currentChar).append(charCount);
+                currentChar = s.charAt(i);
+                charCount = 1;
+            }
+        }
+        
+        encodedString.append(currentChar).append(charCount);
+        
+        return encodedString.toString();
+    }
+}
